@@ -77,11 +77,9 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 2px; color: var(--accent); margin-bottom: 24px;
 }
 .hero__name {
-  font-family: var(--serif); font-weight: 500; line-height: 0.92;
-  font-size: clamp(3rem, 10.5vw, 7.8rem); letter-spacing: -0.03em;
+  font-family: var(--serif); font-weight: 500; line-height: 1; white-space: nowrap;
+  font-size: clamp(2.4rem, 8vw, 5.2rem); letter-spacing: -0.02em;
 }
-.hero__name > span { display: block; }
-.hero__name-2 { margin-left: clamp(0px, 5vw, 70px); font-style: italic; font-weight: 400; white-space: nowrap; }
 .dot { display: inline; color: var(--accent); }
 
 .hero__lower {
@@ -104,14 +102,7 @@ a { color: inherit; text-decoration: none; }
 .hero__portrait { position: relative; }
 .hero__portrait img {
   display: block; width: clamp(190px, 24vw, 260px); aspect-ratio: 3/4; object-fit: cover;
-  object-position: 50% 16%; filter: grayscale(1) contrast(1.03); transition: filter 0.55s ease;
-}
-.hero__portrait:hover img { filter: grayscale(0) contrast(1); }
-.hero__portrait-tag {
-  position: absolute; bottom: 12px; left: -14px;
-  font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px;
-  background: var(--accent); color: var(--paper); padding: 6px 9px;
-  writing-mode: vertical-rl; transform: rotate(180deg);
+  object-position: 50% 16%;
 }
 
 /* ---------- Section scaffold ---------- */
