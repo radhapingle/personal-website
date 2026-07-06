@@ -7,48 +7,61 @@
   <meta name="description" content="Radha Pingle — Cognitive Science and Statistics & Data Science student at Carnegie Mellon University." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a href="#top" class="nav__brand">Radha Pingle</a>
-      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
+  <header class="hdr" id="top">
+    <div class="hdr__inner">
+      <a href="#top" class="hdr__brand" aria-label="Radha Pingle — home">RP</a>
+      <button class="hdr__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
       </button>
-      <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="nav__resume" href="assets/RadhaP_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
-      </ul>
-    </nav>
+      <nav class="hdr__nav">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/RadhaP_Resume.pdf" target="_blank" rel="noopener" class="hdr__resume">Resume ↗</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero container">
-      <div class="hero__text">
-        <p class="hero__eyebrow">Carnegie Mellon University</p>
-        <h1 class="hero__name">Radha Pingle</h1>
-        <p class="hero__tagline">Cognitive Science + Statistics &amp; Data Science</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#contact">Get in touch</a>
-          <a class="btn btn--ghost" href="assets/RadhaP_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <p class="hero__kicker reveal">Cognitive Science · Statistics &amp; Data Science — CMU '28</p>
+      <h1 class="hero__name reveal">
+        <span>Radha</span>
+        <span class="hero__name-2">Pingle<span class="dot">.</span></span>
+      </h1>
+      <div class="hero__lower">
+        <div class="hero__left reveal">
+          <p class="hero__statement">
+            I study how the mind makes decisions — and design digital tools that
+            respect how people actually think.
+          </p>
+          <div class="hero__actions">
+            <a class="link-arrow" href="#contact">Get in touch <span>→</span></a>
+            <a class="link-arrow" href="assets/RadhaP_Resume.pdf" target="_blank" rel="noopener">Download resume <span>↗</span></a>
+          </div>
         </div>
-      </div>
-      <div class="hero__portrait">
-        <img src="assets/profile.jpg" alt="Portrait of Radha Pingle"
-             onerror="this.classList.add('is-missing'); this.alt='Add assets/profile.jpg';" />
+        <div class="hero__portrait reveal">
+          <img src="assets/profile.jpg" alt="Portrait of Radha Pingle"
+               onerror="this.style.display='none';" />
+          <span class="hero__portrait-tag">Pittsburgh, PA</span>
+        </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section container">
-      <h2 class="section__title">About</h2>
-      <div class="about">
+    <!-- ABOUT -->
+    <section class="sec" id="about">
+      <div class="sec__head reveal">
+        <span class="sec__num">01</span>
+        <span class="sec__line"></span>
+        <h2 class="sec__title">About</h2>
+      </div>
+      <div class="about reveal">
         <p>
           Hi! I'm Radha, a student at Carnegie Mellon University studying Cognitive Science
           and Statistics &amp; Data Science. I've always been fascinated by human behavior and
@@ -61,161 +74,193 @@
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="section container">
-      <h2 class="section__title">Education</h2>
-      <div class="edu">
-        <div class="edu__head">
-          <h3>Carnegie Mellon University</h3>
-          <span class="edu__date">Expected May 2028</span>
+    <!-- EDUCATION -->
+    <section class="sec" id="education">
+      <div class="sec__head reveal">
+        <span class="sec__num">02</span>
+        <span class="sec__line"></span>
+        <h2 class="sec__title">Education</h2>
+      </div>
+      <div class="edu reveal">
+        <div class="edu__main">
+          <h3 class="edu__school">Carnegie Mellon University</h3>
+          <p class="edu__degree">B.S. Cognitive Science + Statistics &amp; Data Science</p>
+          <p class="edu__honor">Nominated &amp; selected as a Quantitative Social Science Scholar (QSSS Program).</p>
         </div>
-        <p class="edu__degree">B.S. in Cognitive Science + Statistics and Data Science &middot; Pittsburgh, PA</p>
-        <p class="edu__note">Nominated &amp; selected as a Quantitative Social Science Scholar (QSSS Program).</p>
-        <p class="edu__coursework">
-          <strong>Relevant coursework:</strong> Methods for Statistics &amp; Data Science,
-          Applied Quantitative Social Science Seminar I &amp; II, Intro to Research Methods,
-          Principles of Computing, Fundamentals of Programming &amp; Computer Science,
-          Principles of Imperative Computation, Cognitive Psychology,
-          Matrices &amp; Linear Transformations, Probability and Statistical Inference I,
-          Multivariate Analysis, Designing Human Centered Software.
-        </p>
+        <div class="edu__meta">
+          <p class="edu__year">Expected May 2028</p>
+          <p class="edu__place">Pittsburgh, PA</p>
+        </div>
+        <div class="edu__course">
+          <p class="edu__label">Relevant coursework</p>
+          <p>
+            Methods for Statistics &amp; Data Science · Applied Quantitative Social Science Seminar I &amp; II ·
+            Intro to Research Methods · Principles of Computing · Fundamentals of Programming &amp; Computer Science ·
+            Principles of Imperative Computation · Cognitive Psychology · Matrices &amp; Linear Transformations ·
+            Probability and Statistical Inference I · Multivariate Analysis · Designing Human Centered Software
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section container">
-      <h2 class="section__title">Experience</h2>
-      <div class="timeline">
-
-        <article class="job">
-          <div class="job__head">
-            <h3 class="job__role">Data Science Intern</h3>
-            <span class="job__date">May 2025 – Aug 2025</span>
-          </div>
-          <p class="job__org">Epistemix</p>
-          <ul class="job__points">
-            <li>Built an LLM agent (“Public Health Copilot”) using Gemini 1.5 Flash to deliver ZIP-code-specific insights, iterating on response quality through structured prompt changes and testing.</li>
-            <li>Drove product decisions by deploying 15 surveys and conducting 7 user interviews, translating findings into concrete feature and prompt-design changes.</li>
-            <li>Created a mock ZIP-code dataset to test model behavior and validate response consistency.</li>
-            <li>Developed a React/JavaScript conversational interface and integrated it with the model via API calls.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <div class="job__head">
-            <h3 class="job__role">Cognitive Development Researcher</h3>
-            <span class="job__date">May 2026 – Present</span>
-          </div>
-          <p class="job__org">Kid Neuro Lab</p>
-          <ul class="job__points">
-            <li>Processed structural and functional fMRI data for 5 participants across 3 studies investigating STEM skill development in children.</li>
-            <li>Conducted quality-control checks on fMRI images, identifying motion artifacts and other scan-quality issues prior to analysis.</li>
-            <li>Assisted with fMRI data collection for child participants, supporting scan setup, participant flow, and experimental procedures.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <div class="job__head">
-            <h3 class="job__role">Machine Learning Research Assistant</h3>
-            <span class="job__date">May 2026 – Present</span>
-          </div>
-          <p class="job__org">Laboratory for Computational Perception</p>
-          <ul class="job__points">
-            <li>Scaled a labeled natural-sound dataset by over 260% (275 to 1,000+ validated samples) to power human and AI auditory-categorization research.</li>
-            <li>Used Python to curate, validate, and organize short audio clips with category labels.</li>
-            <li>Supported dataset quality control by reviewing sound clips, refining labels, and preparing data for human–model comparison experiments.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <div class="job__head">
-            <h3 class="job__role">Research Assistant</h3>
-            <span class="job__date">May 2025 – Aug 2025</span>
-          </div>
-          <p class="job__org">Cognitive &amp; Social Development Lab, CMU</p>
-          <ul class="job__points">
-            <li>Reviewed dozens of academic papers on how visual illustration styles shape children's perception and implicit bias, surfacing key research gaps.</li>
-            <li>Designed an original experiment and hypotheses testing how facial depiction style influences race-based perception.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <div class="job__head">
-            <h3 class="job__role">Website Manager</h3>
-            <span class="job__date">Nov 2024 – Aug 2025</span>
-          </div>
-          <p class="job__org">Professor Emerita, CMU</p>
-          <ul class="job__points">
-            <li>Collaborated with a faculty member to redesign and update her academic website, improving content organization, navigation, and overall clarity.</li>
-            <li>Managed site structure and clean version updates using FileZilla, VSCode, and SFTP.</li>
-          </ul>
-        </article>
-
+    <!-- WORK -->
+    <section class="sec" id="work">
+      <div class="sec__head reveal">
+        <span class="sec__num">03</span>
+        <span class="sec__line"></span>
+        <h2 class="sec__title">Selected Work</h2>
       </div>
+
+      <ul class="work">
+        <li class="work__row reveal">
+          <span class="work__year">2025</span>
+          <div class="work__body">
+            <h3 class="work__role">Data Science Intern <span class="work__org">Epistemix</span></h3>
+            <ul class="work__points">
+              <li>Built an LLM agent (“Public Health Copilot”) using Gemini 1.5 Flash to deliver ZIP-code-specific insights, iterating on response quality through structured prompt changes and testing.</li>
+              <li>Drove product decisions by deploying 15 surveys and conducting 7 user interviews, translating findings into concrete feature and prompt-design changes.</li>
+              <li>Created a mock ZIP-code dataset to test model behavior and validate response consistency.</li>
+              <li>Developed a React/JavaScript conversational interface and integrated it with the model via API calls.</li>
+            </ul>
+          </div>
+          <span class="work__arrow">↗</span>
+        </li>
+
+        <li class="work__row reveal">
+          <span class="work__year">2026</span>
+          <div class="work__body">
+            <h3 class="work__role">Cognitive Development Researcher <span class="work__org">Kid Neuro Lab</span></h3>
+            <ul class="work__points">
+              <li>Processed structural and functional fMRI data for 5 participants across 3 studies investigating STEM skill development in children.</li>
+              <li>Conducted quality-control checks on fMRI images, identifying motion artifacts and other scan-quality issues prior to analysis.</li>
+              <li>Assisted with fMRI data collection for child participants, supporting scan setup, participant flow, and experimental procedures.</li>
+            </ul>
+          </div>
+          <span class="work__arrow">↗</span>
+        </li>
+
+        <li class="work__row reveal">
+          <span class="work__year">2026</span>
+          <div class="work__body">
+            <h3 class="work__role">Machine Learning RA <span class="work__org">Lab for Computational Perception</span></h3>
+            <ul class="work__points">
+              <li>Scaled a labeled natural-sound dataset by over 260% (275 to 1,000+ validated samples) to power human and AI auditory-categorization research.</li>
+              <li>Used Python to curate, validate, and organize short audio clips with category labels.</li>
+              <li>Supported dataset quality control by reviewing sound clips, refining labels, and preparing data for human–model comparison experiments.</li>
+            </ul>
+          </div>
+          <span class="work__arrow">↗</span>
+        </li>
+
+        <li class="work__row reveal">
+          <span class="work__year">2025</span>
+          <div class="work__body">
+            <h3 class="work__role">Research Assistant <span class="work__org">Cognitive &amp; Social Development Lab, CMU</span></h3>
+            <ul class="work__points">
+              <li>Reviewed dozens of academic papers on how visual illustration styles shape children's perception and implicit bias, surfacing key research gaps.</li>
+              <li>Designed an original experiment and hypotheses testing how facial depiction style influences race-based perception.</li>
+            </ul>
+          </div>
+          <span class="work__arrow">↗</span>
+        </li>
+
+        <li class="work__row reveal">
+          <span class="work__year">2024</span>
+          <div class="work__body">
+            <h3 class="work__role">Website Manager <span class="work__org">Professor Emerita, CMU</span></h3>
+            <ul class="work__points">
+              <li>Collaborated with a faculty member to redesign and update her academic website, improving content organization, navigation, and overall clarity.</li>
+              <li>Managed site structure and clean version updates using FileZilla, VSCode, and SFTP.</li>
+            </ul>
+          </div>
+          <span class="work__arrow">↗</span>
+        </li>
+      </ul>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section container">
-      <h2 class="section__title">Selected Projects</h2>
+    <!-- PROJECTS -->
+    <section class="sec" id="projects">
+      <div class="sec__head reveal">
+        <span class="sec__num">04</span>
+        <span class="sec__line"></span>
+        <h2 class="sec__title">Projects</h2>
+      </div>
       <div class="projects">
-        <article class="card">
-          <h3 class="card__title">Fairy-Tale Language Model</h3>
-          <p class="card__meta">Principles of Computing (15-110)</p>
-          <p>Trained a language model on Grimm &amp; Andersen fairy tales and evaluated stylistic patterns through statistical frequency analysis.</p>
+        <article class="proj reveal">
+          <p class="proj__tag">Principles of Computing · 15-110</p>
+          <h3 class="proj__title">Fairy-Tale Language Model</h3>
+          <p class="proj__desc">Trained a language model on Grimm &amp; Andersen fairy tales and evaluated stylistic patterns through statistical frequency analysis.</p>
         </article>
-        <article class="card">
-          <h3 class="card__title">Randomized Recipe Game</h3>
-          <p class="card__meta">Fundamentals of Programming &amp; CS (15-112)</p>
-          <p>Built a Python game with randomized recipes, priority-based scheduling, and sequencing-dependent scoring logic.</p>
+        <article class="proj reveal">
+          <p class="proj__tag">Fundamentals of Programming · 15-112</p>
+          <h3 class="proj__title">Randomized Recipe Game</h3>
+          <p class="proj__desc">Built a Python game with randomized recipes, priority-based scheduling, and sequencing-dependent scoring logic.</p>
         </article>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section container">
-      <h2 class="section__title">Technical Skills</h2>
-      <div class="skills">
+    <!-- SKILLS -->
+    <section class="sec" id="skills">
+      <div class="sec__head reveal">
+        <span class="sec__num">05</span>
+        <span class="sec__line"></span>
+        <h2 class="sec__title">Skills</h2>
+      </div>
+      <div class="skills reveal">
         <div class="skills__group">
-          <h3>Languages</h3>
-          <ul class="tags">
+          <p class="skills__label">Languages</p>
+          <ul class="skills__list">
             <li>Python</li><li>R</li><li>Java</li><li>C++</li><li>HTML</li>
           </ul>
         </div>
         <div class="skills__group">
-          <h3>Tools &amp; Frameworks</h3>
-          <ul class="tags">
+          <p class="skills__label">Tools &amp; Frameworks</p>
+          <ul class="skills__list">
             <li>React</li><li>Git</li><li>Figma</li><li>MATLAB</li><li>Lovable</li><li>Gorilla</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section container">
-      <h2 class="section__title">Get in touch</h2>
-      <p class="contact__lead">
-        I'm always excited to connect over research, product design, or new ideas.
-      </p>
-      <div class="contact__links">
-        <a class="contact__link" href="mailto:rpingle@andrew.cmu.edu">
-          <span class="contact__label">Email</span>
-          <span class="contact__value">rpingle@andrew.cmu.edu</span>
-        </a>
-        <a class="contact__link" href="https://www.linkedin.com/in/radha-pingle-651835333" target="_blank" rel="noopener">
-          <span class="contact__label">LinkedIn</span>
-          <span class="contact__value">/in/radha-pingle</span>
-        </a>
-        <a class="contact__link" href="assets/RadhaP_Resume.pdf" target="_blank" rel="noopener">
-          <span class="contact__label">Resume</span>
-          <span class="contact__value">Download PDF</span>
-        </a>
+    <!-- CONTACT -->
+    <section class="sec sec--contact" id="contact">
+      <div class="sec__head reveal">
+        <span class="sec__num">06</span>
+        <span class="sec__line"></span>
+        <h2 class="sec__title">Contact</h2>
+      </div>
+      <div class="contact reveal">
+        <p class="contact__lead">
+          Always excited to connect over research, product design, or a new idea.
+        </p>
+        <ul class="contact__list">
+          <li>
+            <a href="mailto:rpingle@andrew.cmu.edu">
+              <span class="contact__k">Email</span>
+              <span class="contact__v">rpingle@andrew.cmu.edu <span class="contact__arw">↗</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/radha-pingle-651835333" target="_blank" rel="noopener">
+              <span class="contact__k">LinkedIn</span>
+              <span class="contact__v">/in/radha-pingle <span class="contact__arw">↗</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="assets/RadhaP_Resume.pdf" target="_blank" rel="noopener">
+              <span class="contact__k">Resume</span>
+              <span class="contact__v">Download PDF <span class="contact__arw">↗</span></span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Radha Pingle</p>
+  <footer class="ftr">
+    <div class="ftr__inner">
+      <span>Radha Pingle</span>
+      <span class="ftr__mono">© <span id="year"></span> · Built with care</span>
     </div>
   </footer>
 
