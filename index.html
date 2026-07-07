@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="synapse" id="synapse" aria-hidden="true"></div>
+  <div class="focus-cursor" id="focusCursor" aria-hidden="true"></div>
+
   <header class="hdr" id="top">
     <div class="hdr__inner">
       <a href="#top" class="hdr__brand" aria-label="Radha Pingle — home">RP</a>
@@ -19,8 +22,8 @@
       </button>
       <nav class="hdr__nav">
         <a href="#about">About</a>
+        <a href="#experiment">Play</a>
         <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <a href="assets/RadhaP_Resume.pdf" target="_blank" rel="noopener" class="hdr__resume">Resume ↗</a>
       </nav>
@@ -30,18 +33,22 @@
   <main>
     <!-- HERO -->
     <section class="hero">
-      <p class="hero__kicker reveal">Cognitive Science · Statistics &amp; Data Science — CMU '28</p>
-      <h1 class="hero__name reveal">Radha Pingle<span class="dot">.</span></h1>
-      <div class="hero__lower">
-        <div class="hero__left reveal">
-          <div class="hero__actions">
-            <a class="link-arrow" href="#contact">Get in touch <span>→</span></a>
-            <a class="link-arrow" href="assets/RadhaP_Resume.pdf" target="_blank" rel="noopener">Download resume <span>↗</span></a>
+      <canvas class="hero__canvas" id="neuro" aria-hidden="true"></canvas>
+      <div class="hero__content">
+        <p class="hero__kicker reveal">Cognitive Science · Statistics &amp; Data Science — CMU '28</p>
+        <h1 class="hero__name reveal">Radha Pingle<span class="dot">.</span></h1>
+        <p class="marginalia marginalia--hero reveal">// move your cursor — the neurons are paying attention</p>
+        <div class="hero__lower">
+          <div class="hero__left reveal">
+            <div class="hero__actions">
+              <a class="link-arrow" href="#contact">Get in touch <span>→</span></a>
+              <a class="link-arrow" href="assets/RadhaP_Resume.pdf" target="_blank" rel="noopener">Download resume <span>↗</span></a>
+            </div>
           </div>
-        </div>
-        <div class="hero__portrait reveal">
-          <img src="assets/profile.jpg" alt="Portrait of Radha Pingle"
-               onerror="this.style.display='none';" />
+          <div class="hero__portrait reveal">
+            <img src="assets/profile.jpg" alt="Portrait of Radha Pingle"
+                 onerror="this.style.display='none';" />
+          </div>
         </div>
       </div>
     </section>
@@ -63,13 +70,42 @@
           in campus research and Tri Delta, and I'm always excited to learn from new experiences,
           collaborate with others, and explore new ideas.
         </p>
+        <p class="marginalia reveal">// currently curious about: decision-making, perception &amp; human-centered design</p>
+      </div>
+    </section>
+
+    <!-- EXPERIMENT -->
+    <section class="sec" id="experiment">
+      <div class="sec__head reveal">
+        <span class="sec__num">02</span>
+        <span class="sec__line"></span>
+        <h2 class="sec__title">A Tiny Experiment</h2>
+      </div>
+      <div class="stroop reveal">
+        <p class="stroop__intro">
+          Since I'm fascinated by how the mind makes split-second decisions, here's one to try.
+          It's the <strong>Stroop effect</strong>: name the <em>color of the ink</em>, not the word it spells.
+          Your brain will read the word automatically and fight you the whole way.
+        </p>
+        <div class="stroop__stage">
+          <div class="stroop__wordwrap">
+            <span class="stroop__word" id="stroopWord">ready?</span>
+          </div>
+          <div class="stroop__hud">
+            <span id="stroopProgress" class="stroop__progress">— / 10</span>
+            <span id="stroopTimer" class="stroop__timer">0 ms</span>
+          </div>
+          <div class="stroop__choices" id="stroopChoices"></div>
+          <button class="stroop__btn" id="stroopStart" type="button">Start experiment →</button>
+          <div class="stroop__result" id="stroopResult" hidden></div>
+        </div>
       </div>
     </section>
 
     <!-- EDUCATION -->
     <section class="sec" id="education">
       <div class="sec__head reveal">
-        <span class="sec__num">02</span>
+        <span class="sec__num">03</span>
         <span class="sec__line"></span>
         <h2 class="sec__title">Education</h2>
       </div>
@@ -98,7 +134,7 @@
     <!-- WORK -->
     <section class="sec" id="work">
       <div class="sec__head reveal">
-        <span class="sec__num">03</span>
+        <span class="sec__num">04</span>
         <span class="sec__line"></span>
         <h2 class="sec__title">Selected Work</h2>
       </div>
@@ -173,7 +209,7 @@
     <!-- PROJECTS -->
     <section class="sec" id="projects">
       <div class="sec__head reveal">
-        <span class="sec__num">04</span>
+        <span class="sec__num">05</span>
         <span class="sec__line"></span>
         <h2 class="sec__title">Projects</h2>
       </div>
@@ -194,7 +230,7 @@
     <!-- SKILLS -->
     <section class="sec" id="skills">
       <div class="sec__head reveal">
-        <span class="sec__num">05</span>
+        <span class="sec__num">06</span>
         <span class="sec__line"></span>
         <h2 class="sec__title">Skills</h2>
       </div>
@@ -217,7 +253,7 @@
     <!-- CONTACT -->
     <section class="sec sec--contact" id="contact">
       <div class="sec__head reveal">
-        <span class="sec__num">06</span>
+        <span class="sec__num">07</span>
         <span class="sec__line"></span>
         <h2 class="sec__title">Contact</h2>
       </div>
