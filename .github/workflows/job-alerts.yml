@@ -1,0 +1,73 @@
+name: Job Alerts (Summer 2027)
+
+# Automatically checks for new relevant Summer 2027 postings and emails
+# rpingle@andrew.cmu.edu. Runs on a schedule and can also be triggered by hand.
+on:
+  schedule:
+    # Times are UTC. These fire at ~8:00 AM and ~6:00 PM US Eastern.
+    - cron: "0 12 * * *"
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        type: choice
+        default: normal
+        options:
+          - normal    # find NEW matches and email them
+          - seed      # mark current matches as seen WITHOUT emailing (run once at setup)
+          - dry-run   # print matches, don't email, don't touch state
+
+# Needed so the workflow can commit the updated "seen" state back to the repo.
+permissions:
+  contents: write
+
+concurrency:
+  group: job-alerts
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run job alerts
+        working-directory: job-alerts
+        env:
+          # Email delivery (set these in repo Settings -> Secrets -> Actions)
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM_NAME: "Radha Job Alerts"
+          ALERT_TO: rpingle@andrew.cmu.edu
+          # Optional broader feed (psychology / UX / behavioral roles beyond the
+          # tech-internship list). Leave unset to skip -- everything else works.
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: |
+          MODE="${{ github.event.inputs.mode }}"
+          case "$MODE" in
+            seed)    python run.py --seed ;;
+            dry-run) python run.py --dry-run ;;
+            *)       python run.py ;;
+          esac
+
+      - name: Persist "seen" state
+        # Skip committing on dry-run (state is unchanged there anyway).
+        if: ${{ github.event.inputs.mode != 'dry-run' }}
+        run: |
+          if [[ -n "$(git status --porcelain state/)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add state/
+            git commit -m "job-alerts: update seen state [skip ci]"
+            git push
+          else
+            echo "No state changes to commit."
+          fi
