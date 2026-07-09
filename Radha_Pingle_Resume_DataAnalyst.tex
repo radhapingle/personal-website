@@ -1,0 +1,91 @@
+\documentclass[10.5pt]{article}
+\usepackage[a4paper,top=0.5in,bottom=0.5in,left=0.9in,right=0.9in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\usepackage{titling}
+
+%----- Section formatting -----
+\titleformat{\section}{\bfseries\large}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\bfseries\normalsize}{}{0em}{}
+\titlespacing*{\section}{0pt}{0.9em}{0.5em}
+
+% bullet spacing
+\setlist[itemize]{itemsep=1.5pt, topsep=1pt, partopsep=0pt, parsep=0pt, leftmargin=1.4em}
+
+%----- Header -----
+\renewcommand{\maketitle}{
+  \begin{center}
+    {\LARGE \textbf{Radha Pingle}}\\[0.3em]
+    \rule{0.5\textwidth}{0.4pt}\\[0.4em]
+    \href{mailto:rpingle@andrew.cmu.edu}{rpingle@andrew.cmu.edu} \,$\bullet$\, 973-981-7814
+  \end{center}
+  \vspace{-1.0em}
+}
+
+\begin{document}
+\maketitle
+
+%====================================================
+\vspace{-0.5em}
+\section{Education}
+\textbf{Carnegie Mellon University}, Pittsburgh, PA \hfill \textit{May 2028} \\
+Bachelor of Science, Cognitive Science + Statistics and Data
+Science\\ 
+\textbf{Nominated \& Selected as Quantitative Social Science Scholar (QSSS Program)} \\[0.7em]
+\textbf{Relevant Coursework:} Methods for Statistics \& Data Science, Applied Quantitative Social Science Seminar I \& II, Intro to Research Methods, Principles of Computing, Fundamentals of Programming \& Computer Science, Principles of Imperative Computation, Cognitive Psychology
+
+
+%====================================================
+\section{Experience}
+
+\noindent\textbf{Machine Learning RA – Laboratory for Computational Perception} \hfill 
+\textit{May 2026 – Present}\\[-1.3em]
+\begin{itemize}
+  \item Scaled a labeled natural-sound dataset by over 260\% (275 to 1,000+ validated samples) to power human and AI auditory-categorization research.
+  \item Used Python to curate, clean, validate, and organize labeled audio clips for downstream analysis.
+  \item Built and enforced dataset quality control by reviewing clips, refining labels, and preparing data for human--model comparison experiments.
+\end{itemize}
+
+\noindent\textbf{Data Science Intern – Epistemix} \hfill \textit{May 2025 – Aug 2025}\\[-1.3em]
+\begin{itemize}
+  \item Built a mock ZIP-code dataset and ran structured tests to evaluate model behavior and validate response consistency.
+  \item Analyzed findings from 15 surveys and 7 user interviews, translating results into data-backed feature and prompt-design decisions.
+  \item Built an LLM tool (``Public Health Copilot'') using Gemini 1.5 Flash to deliver ZIP-code-specific insights, iterating on quality through structured prompt changes and testing.
+  \item Developed a React/JavaScript conversational interface and integrated it with the model via API calls.
+  \item Translated user research findings into product improvements across prompt design and the front-end experience.
+\end{itemize}
+
+\noindent\textbf{Cognitive Development Researcher -- Kid Neuro Lab} \hfill
+\textit{May 2026 -- Present}\\[-1.3em]
+\begin{itemize}
+  \item Processed structural and functional fMRI data for 5 participants across 3 studies investigating STEM skill development in children.
+  \item Conducted quality control checks on fMRI images, identifying motion artifacts and other scan-quality issues prior to analysis.
+  \item Assisted with fMRI data collection for child participants, supporting scan setup, participant flow, and experimental procedures.
+\end{itemize}
+
+\noindent\textbf{Research Assistant – Cognitive \& Social Development Lab, CMU} \hfill \textit{May 2025 – Aug 2025}\\[-1.3em]
+\begin{itemize}
+  \item Reviewed dozens of academic papers on how visual illustration styles shape children's perception and implicit bias, synthesizing findings to surface research gaps.
+  \item Designed an original experiment and hypotheses testing how facial depiction style influences race-based perception.
+\end{itemize}
+
+\noindent\textbf{Website Manager – Professor Emerita, CMU} \hfill \textit{Nov 2024 – Aug 2025}\\[-1.3em]
+\begin{itemize}
+  \item Collaborated with a faculty member to redesign and update her academic website, improving content organization, navigation, and overall clarity.
+  \item Managed site structure and clean version updates using FileZilla, VSCode, and SFTP.
+\end{itemize}
+
+
+%====================================================
+\section{School Projects}
+\begin{itemize}
+  \item \textbf{Statistical Text Analysis (15-110)} – Trained a language model on a fairy-tale corpus (Grimm \& Andersen) and quantified stylistic patterns through statistical frequency analysis.
+  \item \textbf{Fundamentals of Programming and Computer Science (15-112)} – Built a Python game with randomized recipes, priority-based scheduling, and sequencing-dependent scoring logic.
+\end{itemize}
+%====================================================
+\section{Technical Skills}
+SQL, Python (Pandas), R, Excel, Matlab, Git, Java, C++, C, HTML
+
+\end{document}
