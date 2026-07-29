@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radha Pingle</title>
+  <meta name="description" content="Radha Pingle, Cognitive Science and Statistics & Data Science student at Carnegie Mellon University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+
+  <!-- Mobile header (rail collapses into this) -->
+  <header class="mobilebar">
+    <a href="#top" class="mobilebar__name">Radha Pingle</a>
+    <button class="mobilebar__toggle" aria-label="Toggle index" aria-expanded="false">Index</button>
+    <nav class="mobilebar__nav" id="mobileNav">
+      <a href="#about"><span>01</span> About</a>
+      <a href="#education"><span>02</span> Education</a>
+      <a href="#work"><span>03</span> Experiences</a>
+      <a href="#projects"><span>04</span> Projects</a>
+      <a href="#skills"><span>05</span> Skills</a>
+      <a href="#contact"><span>06</span> Contact</a>
+      <a href="../assets/RadhaP_Resume.pdf" target="_blank" rel="noopener" class="is-resume">Resume ↗</a>
+    </nav>
+  </header>
+
+  <div class="frame">
+
+    <!-- Fixed left rail -->
+    <aside class="rail">
+      <div class="rail__top">
+        <a href="#top" class="rail__name">Radha<br />Pingle</a>
+        <p class="rail__role">Cognitive Science<br />Statistics &amp; Data Science<br />Carnegie Mellon, '28</p>
+      </div>
+
+      <nav class="rail__index" aria-label="Section index">
+        <a href="#about" data-spy="about"><span class="rail__no">01</span>About</a>
+        <a href="#education" data-spy="education"><span class="rail__no">02</span>Education</a>
+        <a href="#work" data-spy="work"><span class="rail__no">03</span>Experiences</a>
+        <a href="#projects" data-spy="projects"><span class="rail__no">04</span>Projects</a>
+        <a href="#skills" data-spy="skills"><span class="rail__no">05</span>Skills</a>
+        <a href="#contact" data-spy="contact"><span class="rail__no">06</span>Contact</a>
+      </nav>
+
+      <div class="rail__foot">
+        <a href="mailto:rpingle@andrew.cmu.edu">Email</a>
+        <a href="https://www.linkedin.com/in/radha-pingle-651835333" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../assets/RadhaP_Resume.pdf" target="_blank" rel="noopener" class="rail__resume">Resume ↗</a>
+      </div>
+    </aside>
+
+    <!-- Content column -->
+    <main class="page">
+
+      <!-- 01 About -->
+      <section class="sec" id="about">
+        <span class="sec__no" aria-hidden="true">01</span>
+        <div class="sec__body">
+          <h2 class="sec__title reveal">About</h2>
+          <div class="about reveal">
+            <figure class="about__fig">
+              <img src="../assets/profile.jpg" alt="Portrait of Radha Pingle" onerror="this.parentElement.style.display='none';" />
+            </figure>
+            <p class="about__text">
+              Hi! I'm Radha, a student at Carnegie Mellon University studying Cognitive Science
+              and Statistics &amp; Data Science. I've always been fascinated by human behavior and
+              understanding our brains and how they influence the way we think and make decisions.
+              I'm very interested in using that knowledge to shape our growing relationship with
+              technology and the design of digital tools / products. Outside of class, I'm involved
+              in campus research and Tri Delta, and I'm always excited to learn from new experiences,
+              collaborate with others, and explore new ideas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 Education -->
+      <section class="sec" id="education">
+        <span class="sec__no" aria-hidden="true">02</span>
+        <div class="sec__body">
+          <h2 class="sec__title reveal">Education</h2>
+          <div class="edu reveal">
+            <div class="edu__row">
+              <div>
+                <h3 class="edu__school">Carnegie Mellon University</h3>
+                <p class="edu__degree">B.S. Cognitive Science + Statistics &amp; Data Science</p>
+                <p class="edu__honor">Nominated &amp; selected as a Quantitative Social Science Scholar (QSSS Program).</p>
+              </div>
+              <div class="edu__meta">
+                <p>Expected May 2028</p>
+                <p>Pittsburgh, PA</p>
+              </div>
+            </div>
+            <div class="edu__course">
+              <p class="label">Relevant coursework</p>
+              <p>
+                Methods for Statistics &amp; Data Science · Applied Quantitative Social Science Seminar I &amp; II ·
+                Intro to Research Methods · Principles of Computing · Fundamentals of Programming &amp; Computer Science ·
+                Principles of Imperative Computation · Cognitive Psychology · Matrices &amp; Linear Transformations ·
+                Probability and Statistical Inference I · Multivariate Analysis · Designing Human Centered Software
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 Selected Work -->
+      <section class="sec" id="work">
+        <span class="sec__no" aria-hidden="true">03</span>
+        <div class="sec__body">
+          <h2 class="sec__title reveal">Experiences</h2>
+          <ul class="work">
+            <li class="work__row reveal">
+              <span class="work__year">2025</span>
+              <div>
+                <h3 class="work__role">Data Science Intern <a class="work__org" href="https://epistemix.com/" target="_blank" rel="noopener">Epistemix</a></h3>
+                <ul class="work__points">
+                  <li>Built an LLM agent (“Public Health Copilot”) using Gemini 1.5 Flash to deliver ZIP-code-specific insights, iterating on response quality through structured prompt changes and testing.</li>
+                  <li>Drove product decisions by deploying 15 surveys and conducting 7 user interviews, translating findings into concrete feature and prompt-design changes.</li>
+                  <li>Created a mock ZIP-code dataset to test model behavior and validate response consistency.</li>
+                  <li>Developed a React/JavaScript conversational interface and integrated it with the model via API calls.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="work__row reveal">
+              <span class="work__year">2026</span>
+              <div>
+                <h3 class="work__role">Cognitive Development Researcher <a class="work__org" href="https://kidneurolab.andrew.cmu.edu/" target="_blank" rel="noopener">Kid Neuro Lab</a></h3>
+                <ul class="work__points">
+                  <li>Processed structural and functional fMRI data for 5 participants across 3 studies investigating STEM skill development in children.</li>
+                  <li>Conducted quality-control checks on fMRI images, identifying motion artifacts and other scan-quality issues prior to analysis.</li>
+                  <li>Assisted with fMRI data collection for child participants, supporting scan setup, participant flow, and experimental procedures.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="work__row reveal">
+              <span class="work__year">2026</span>
+              <div>
+                <h3 class="work__role">Machine Learning RA <span class="work__org">Lab for Computational Perception</span></h3>
+                <ul class="work__points">
+                  <li>Scaled a labeled natural-sound dataset by over 260% (275 to 1,000+ validated samples) to power human and AI auditory-categorization research.</li>
+                  <li>Used Python to curate, validate, and organize short audio clips with category labels.</li>
+                  <li>Supported dataset quality control by reviewing sound clips, refining labels, and preparing data for human-model comparison experiments.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="work__row reveal">
+              <span class="work__year">2025</span>
+              <div>
+                <h3 class="work__role">Research Assistant <a class="work__org" href="https://sites.google.com/andrew.cmu.edu/csdl/home" target="_blank" rel="noopener">Cognitive &amp; Social Development Lab, CMU</a></h3>
+                <ul class="work__points">
+                  <li>Reviewed dozens of academic papers on how visual illustration styles shape children's perception and implicit bias, surfacing key research gaps.</li>
+                  <li>Designed an original experiment and hypotheses testing how facial depiction style influences race-based perception.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="work__row reveal">
+              <span class="work__year">2024</span>
+              <div>
+                <h3 class="work__role">Website Manager <a class="work__org" href="https://www.cmu.edu/dietrich/psychology/memorylab/index.html" target="_blank" rel="noopener">Professor Emerita, CMU</a></h3>
+                <ul class="work__points">
+                  <li>Collaborated with a faculty member to redesign and update her academic website, improving content organization, navigation, and overall clarity.</li>
+                  <li>Managed site structure and clean version updates using FileZilla, VSCode, and SFTP.</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 04 Projects -->
+      <section class="sec" id="projects">
+        <span class="sec__no" aria-hidden="true">04</span>
+        <div class="sec__body">
+          <h2 class="sec__title reveal">Projects</h2>
+          <ul class="projects">
+            <li class="proj reveal">
+              <p class="label">Principles of Computing · 15-110</p>
+              <h3 class="proj__title">Fairy-Tale Language Model</h3>
+              <p class="proj__desc">Trained a language model on Grimm &amp; Andersen fairy tales and evaluated stylistic patterns through statistical frequency analysis.</p>
+            </li>
+            <li class="proj reveal">
+              <p class="label">Fundamentals of Programming · 15-112</p>
+              <h3 class="proj__title">Randomized Recipe Game</h3>
+              <p class="proj__desc">Built a Python game with randomized recipes, priority-based scheduling, and sequencing-dependent scoring logic.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 05 Skills -->
+      <section class="sec" id="skills">
+        <span class="sec__no" aria-hidden="true">05</span>
+        <div class="sec__body">
+          <h2 class="sec__title reveal">Skills</h2>
+          <dl class="skills reveal">
+            <div class="skills__row">
+              <dt class="label">Languages</dt>
+              <dd>Python <i>/</i> R <i>/</i> Java <i>/</i> C++ <i>/</i> HTML</dd>
+            </div>
+            <div class="skills__row">
+              <dt class="label">Tools &amp; Frameworks</dt>
+              <dd>React <i>/</i> Git <i>/</i> Figma <i>/</i> MATLAB <i>/</i> Gorilla</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- 06 Contact -->
+      <section class="sec" id="contact">
+        <span class="sec__no" aria-hidden="true">06</span>
+        <div class="sec__body">
+          <h2 class="sec__title reveal">Contact</h2>
+          <div class="contact reveal">
+            <p class="contact__lead">
+              I'm always excited to connect over research, product design / development, and new ideas!
+            </p>
+            <ul class="contact__list">
+              <li>
+                <a href="mailto:rpingle@andrew.cmu.edu">
+                  <span class="label">Email</span>
+                  <span class="contact__v">rpingle@andrew.cmu.edu</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/radha-pingle-651835333" target="_blank" rel="noopener">
+                  <span class="label">LinkedIn</span>
+                  <span class="contact__v">/in/radha-pingle</span>
+                </a>
+              </li>
+              <li>
+                <a href="../assets/RadhaP_Resume.pdf" target="_blank" rel="noopener">
+                  <span class="label">Resume</span>
+                  <span class="contact__v">Download PDF</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="ftr">
+        <span>Radha Pingle</span>
+        <span>© <span id="year"></span></span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
