@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Chameleon</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.55;
+      color: #1a1a1a;
+      background: #f7f5f1;
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.75rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; }
+    p, li { font-size: 1rem; }
+    .meta { color: #555; font-size: 0.95rem; margin-bottom: 1.5rem; }
+    table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; font-size: 0.95rem; }
+    th, td { border: 1px solid #d5d0c8; padding: 0.45rem 0.55rem; text-align: left; vertical-align: top; }
+    th { background: #efeae2; }
+    a { color: #0b6e4f; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy — Chameleon</h1>
+    <p class="meta">Last updated: August 27, 2026 · Developer: Radha Pingle<br />
+      Product: Chameleon — AI Chat Customizer (Chrome extension)</p>
+
+    <p>This policy describes how Chameleon handles information. Chameleon is a <strong>visual theming</strong> extension for supported AI chat websites. It is <strong>not</strong> affiliated with, endorsed by, or sponsored by OpenAI, Anthropic, Google, or any AI provider.</p>
+
+    <h2>Short version</h2>
+    <ul>
+      <li>We do <strong>not</strong> read, store, or send your chat messages or prompts to our servers.</li>
+      <li>Theme settings live in <strong>your browser</strong> (<code>chrome.storage.local</code>).</li>
+      <li>If you check <strong>Share to gallery</strong>, the extension may talk to <strong>Supabase</strong> only for theme catalog data—never your conversations. Sharing is off by default.</li>
+      <li>We do <strong>not</strong> sell your data.</li>
+    </ul>
+
+    <h2>What the extension does</h2>
+    <p>Chameleon injects styles (CSS) and light page scripts on supported sites so you can change colors, fonts, backgrounds, and related visual options. Supported sites currently include ChatGPT (<code>chatgpt.com</code> / <code>chat.openai.com</code>) and Claude (<code>claude.ai</code>).</p>
+
+    <h2>Data we store on your device</h2>
+    <table>
+      <thead><tr><th>Data</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Active theme / custom colors &amp; fonts</td><td>Apply and remember your look</td></tr>
+        <tr><td>My Themes library &amp; uploads</td><td>Your saved themes (including optional imported backgrounds)</td></tr>
+        <tr><td>Last active site</td><td>Keep ChatGPT and Claude themes independent</td></tr>
+        <tr><td>Optional gallery session tokens</td><td>Only if publishing to the community gallery is used</td></tr>
+      </tbody>
+    </table>
+    <p>You can clear this by removing the extension or clearing extension data in Chrome.</p>
+
+    <h2>Data that may leave your device</h2>
+    <p><strong>Community gallery (optional).</strong> If Supabase is configured, the extension may download published theme metadata (name, author display name, palette JSON, tags). If you publish a theme, palette data you choose to share may be uploaded. Large media backgrounds are not intended for public gallery publishing.</p>
+    <p>Chameleon does not include third-party advertising or analytics SDKs in the extension package as shipped for store review.</p>
+
+    <h2>Permissions</h2>
+    <table>
+      <thead><tr><th>Permission</th><th>Reason</th></tr></thead>
+      <tbody>
+        <tr><td><code>storage</code> / <code>unlimitedStorage</code></td><td>Save themes locally</td></tr>
+        <tr><td><code>tabs</code></td><td>Detect the active AI chat tab for per-site themes</td></tr>
+        <tr><td>Host access to ChatGPT / Claude</td><td>Inject theming only on those pages</td></tr>
+        <tr><td>Host access to <code>*.supabase.co</code></td><td>Optional community theme gallery</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What we do not do</h2>
+    <ul>
+      <li>Collect your AI prompts or responses for our database</li>
+      <li>Sell personal information</li>
+      <li>Use your data for credit decisions or unrelated advertising profiles</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>Chameleon is not directed at children under 13.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy as the product evolves. The “Last updated” date will change when we do.</p>
+
+    <h2>Contact</h2>
+    <p>Questions: <a href="mailto:rpingle@andrew.cmu.edu">rpingle@andrew.cmu.edu</a></p>
+  </main>
+</body>
+</html>
