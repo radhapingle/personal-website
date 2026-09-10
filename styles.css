@@ -1,4 +1,4 @@
-/* Radha Pingle — botanical entrance + readable site */
+/* Radha Pingle — clear layout, botanical palette */
 
 :root {
   --paper: #f7f0e4;
@@ -29,11 +29,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.is-intro {
-  overflow: hidden;
-  height: 100vh;
-}
-
 a { color: inherit; text-decoration: none; }
 ::selection { background: var(--acid); color: var(--ink); }
 
@@ -62,135 +57,10 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.1;
 }
 
-/* ========== INTRO ========== */
-.intro {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: var(--intro-bg);
-  transition: opacity 0.7s ease, visibility 0.7s ease;
-}
-
-.intro.is-done {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-#intro-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.intro__veil {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 48% 38% at 50% 45%, rgba(21, 38, 30, 0.55) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 30% at 12% 14%, rgba(217, 160, 168, 0.14), transparent 55%),
-    radial-gradient(ellipse 38% 28% at 88% 12%, rgba(203, 181, 212, 0.13), transparent 55%),
-    radial-gradient(ellipse 36% 28% at 10% 88%, rgba(182, 201, 48, 0.08), transparent 55%),
-    radial-gradient(ellipse 36% 28% at 90% 86%, rgba(232, 201, 160, 0.1), transparent 55%);
-  pointer-events: none;
-}
-
-.intro__copy {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 24px;
-  pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.5s ease;
-}
-
-.intro.is-parting .intro__copy {
-  opacity: 0;
-  transform: scale(0.96) translateY(-12px);
-}
-
-.intro__eyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--intro-soft);
-  margin-bottom: 18px;
-}
-
-.intro__name {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(3rem, 9vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.01em;
-  color: var(--intro-ink);
-}
-
-.intro__sub {
-  margin-top: 20px;
-  font-size: clamp(0.85rem, 1.6vw, 1rem);
-  color: var(--intro-soft);
-  letter-spacing: 0.02em;
-}
-
-.intro__hint {
-  margin-top: 48px;
-  font-size: 0.75rem;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  color: rgba(197, 208, 196, 0.7);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.intro__scroll {
-  display: inline-block;
-  animation: bob 1.8s ease-in-out infinite;
-}
-
-@keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
-}
-
-.intro__progress {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background: rgba(243, 239, 228, 0.12);
-}
-
-.intro__progress span {
-  display: block;
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, var(--blush), var(--acid), var(--lilac));
-  transition: width 0.05s linear;
-}
-
 /* ========== SITE ========== */
 .site {
   position: relative;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease 0.15s, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s;
-  pointer-events: none;
   overflow: clip;
-}
-
-.site.is-visible {
-  opacity: 1;
-  transform: none;
-  pointer-events: auto;
 }
 
 .ambient {
@@ -218,7 +88,7 @@ a { color: inherit; text-decoration: none; }
   mix-blend-mode: multiply;
 }
 
-.site.is-visible .cursor-glow.is-on { opacity: 1; }
+.cursor-glow.is-on { opacity: 1; }
 
 .site > *:not(.ambient):not(.cursor-glow) { position: relative; z-index: 2; }
 
@@ -334,8 +204,40 @@ main {
 }
 
 .hero {
-  padding: clamp(48px, 8vw, 88px) 0 clamp(56px, 8vw, 96px);
+  padding: clamp(40px, 7vw, 72px) 0 clamp(56px, 8vw, 96px);
   border-bottom: 1px solid var(--line);
+}
+
+.mast__eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 14px;
+}
+
+.mast__name {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(3rem, 8vw, 5.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  max-width: 12ch;
+}
+
+.mast__sub {
+  margin: 16px 0 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  color: var(--ink-soft);
+}
+
+.mast__sub::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin-top: 28px;
+  background: var(--acid);
 }
 
 .hero__grid {
@@ -343,6 +245,7 @@ main {
   grid-template-columns: 1.35fr 0.85fr;
   gap: clamp(28px, 5vw, 56px);
   align-items: start;
+  margin-top: clamp(36px, 5vw, 52px);
 }
 
 .lede {
@@ -602,9 +505,7 @@ a.org:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .intro__scroll { animation: none; }
   html { scroll-behavior: auto; }
-  .site { transition: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .cursor-glow, .ambient { display: none; }
   .work__item:hover { padding-left: 0; }

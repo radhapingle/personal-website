@@ -214,12 +214,4 @@ function bootInteractions() {
   spy();
 }
 
-window.addEventListener("intro:done", () => {
-  window.scrollTo(0, 0);
-  bootInteractions();
-});
-
-// If intro was skipped via reduced motion before this module runs
-if (document.getElementById("site")?.classList.contains("is-visible")) {
-  bootInteractions();
-}
+bootInteractions();

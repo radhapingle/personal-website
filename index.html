@@ -9,25 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
-  <!-- Short botanical intro -->
-  <div id="intro" class="intro" aria-hidden="false">
-    <canvas id="intro-canvas"></canvas>
-    <div class="intro__veil"></div>
-    <div class="intro__copy">
-      <p class="intro__eyebrow">Carnegie Mellon · '28</p>
-      <h1 class="intro__name">Radha Pingle</h1>
-      <p class="intro__sub">Cognitive Science · HCI</p>
-      <p class="intro__hint"><span class="intro__scroll">Scroll</span> to enter</p>
-    </div>
-    <div class="intro__progress" aria-hidden="true"><span id="introBar"></span></div>
-  </div>
-
-  <!-- Normal site (revealed after intro) -->
-  <div id="site" class="site" aria-hidden="true">
+  <div id="site" class="site">
     <canvas id="ambient" class="ambient" aria-hidden="true"></canvas>
     <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
@@ -58,7 +44,10 @@
     </div>
 
     <main>
-      <section class="hero reveal" id="about">
+      <section class="hero" id="about">
+        <p class="mast__eyebrow">Carnegie Mellon · '28</p>
+        <h1 class="mast__name">Radha Pingle</h1>
+        <p class="mast__sub">Cognitive Science · Information Systems</p>
         <div class="hero__grid">
           <div class="hero__text">
             <h2 class="section-title">About</h2>
@@ -225,15 +214,6 @@
     </footer>
   </div>
 
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
-    }
-  }
-  </script>
-  <script type="module" src="intro.js?v=3"></script>
-  <script type="module" src="site.js?v=3"></script>
+  <script type="module" src="site.js?v=4"></script>
 </body>
 </html>
